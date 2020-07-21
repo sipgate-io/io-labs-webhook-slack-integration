@@ -1,4 +1,5 @@
 const { createWebhookModule } = require("sipgateio");
+const axios = require("axios").default;
 
 const webhookServerOptions = {
   port: process.env.SERVER_PORT || 3000,
@@ -10,7 +11,9 @@ createWebhookModule()
   .then((server) => {
     server.onHangUp((hangUpEvent) => {
       if (hangUpEvent.cause === "cancel") {
-        console.log("Sending Slack Notification.");
+        axios.post(process.env.SLACK_WEBHOOK_URL, {
+          text: `Cancelled call from ${hangUpEvent.from} to ${hangUpEvent.to}`,
+        });
       }
     });
   });
