@@ -2,7 +2,7 @@ const { createWebhookModule } = require("sipgateio");
 const axios = require("axios").default;
 
 const webhookServerOptions = {
-  port: process.env.SERVER_PORT || 3000,
+  port: process.env.SERVER_PORT || 8080,
   serverAddress: process.env.SERVER_ADDRESS,
 };
 
