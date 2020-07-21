@@ -9,6 +9,10 @@ const webhookServerOptions = {
 createWebhookModule()
   .createServer(webhookServerOptions)
   .then((server) => {
+    console.log(
+      `Server running at ${webhookServerOptions.serverAddress}\n` + "Ready for calls 📞"
+    );
+
     server.onHangUp((hangUpEvent) => {
       if (hangUpEvent.cause === "cancel") {
         axios.post(process.env.SLACK_WEBHOOK_URL, {
