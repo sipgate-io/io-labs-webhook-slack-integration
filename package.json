@@ -1,0 +1,22 @@
+{
+  "name": "io-labs-webhook-slack-integration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sipgate-io/io-labs-webhook-slack-integration.git"
+  },
+  "author": "sipgate.io Team <io-team@sipgate.de>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/sipgate-io/io-labs-webhook-slack-integration/issues"
+  },
+  "homepage": "https://github.com/sipgate-io/io-labs-webhook-slack-integration#readme",
+  "dependencies": {
+    "sipgateio": "^1.9.0"
+  }
+}
