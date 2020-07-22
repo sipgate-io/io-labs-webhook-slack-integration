@@ -34,7 +34,7 @@ createWebhookModule()
       if (hangUpEvent.cause === "cancel") {
         axios
           .post(slackWebhookUrl, {
-            text: `Cancelled call from ${hangUpEvent.from} to ${hangUpEvent.to}`,
+            text: `Canceled call from ${hangUpEvent.from} to ${hangUpEvent.to}`,
           })
           .catch(console.error);
       }
