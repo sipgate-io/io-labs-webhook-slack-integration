@@ -2,9 +2,9 @@
   "name": "io-labs-webhook-slack-integration",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node main.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
