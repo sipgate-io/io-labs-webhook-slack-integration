@@ -101,9 +101,16 @@ npm install
 
 Create a webhook in your slack control panel. Details can be found in the official [slack documentation](https://api.slack.com/messaging/webhooks).
 
+Create the `.env` by copying the [`.env.example`](.env.example) and set the values according to the comment above each variable.
+
 Run the application:
 ```bash
-SERVER_ADDRESS=https://your.public.address SLACK_WEBHOOK_URL=https://your.slack.webhook.url npm start
+npm start
+```
+
+Alternatively you can set environment variables as part of the command:
+```bash
+WEBHOOK_SERVER_ADDRESS=https://your.public.address WEBHOOK_SERVER_PORT=8080 SLACK_WEBHOOK_URL=https://your.slack.webhook.url npm start
 ```
 
 ## Common Issues

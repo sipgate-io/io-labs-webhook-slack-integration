@@ -1,6 +1,8 @@
 const { createWebhookModule } = require("sipgateio");
 const axios = require("axios").default;
 
+require("dotenv").config();
+
 const slackWebhookUrl = process.env.SLACK_WEBHOOK_URL;
 if (!slackWebhookUrl) {
   console.error(
@@ -9,16 +11,16 @@ if (!slackWebhookUrl) {
   return;
 }
 
-const serverAddress = process.env.SERVER_ADDRESS;
+const serverAddress = process.env.WEBHOOK_SERVER_ADDRESS;
 if (!serverAddress) {
   console.error(
-    "Please provide a server address via the environment variable SERVER_ADDRESS"
+    "Please provide a server address via the environment variable WEBHOOK_SERVER_ADDRESS"
   );
   return;
 }
 
 const webhookServerOptions = {
-  port: process.env.SERVER_PORT || 8080,
+  port: process.env.WEBHOOK_SERVER_PORT || 8080,
   serverAddress,
 };
 
