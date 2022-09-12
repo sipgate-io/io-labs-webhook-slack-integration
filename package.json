@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/sipgate-io/io-labs-webhook-slack-integration#readme",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "dotenv": "^16.0.2",
     "sipgateio": "^2.1.4"
   }
